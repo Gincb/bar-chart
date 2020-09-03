@@ -17,8 +17,11 @@ function pushArray() {
 
     //Create new element for each number
     const newDiv = document.createElement("span");
+    const newP = document.createElement("p");
     newDiv.style.height = `${array[i]}em`;
+    newP.innerHTML = array[i];
     displayBar.appendChild(newDiv);
+    newDiv.appendChild(newP);
     console.log(array);
 
     //Check lenght and remove last item
@@ -28,5 +31,5 @@ function pushArray() {
     } else {
       i++;
     }
-  }, 800);
+  }, 1000);
 }
