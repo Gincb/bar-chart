@@ -1,0 +1,49 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  align-items: flex-end;
+  width: 100%;
+  min-height: 32em;
+  margin: 0;
+  padding: 5em 0;
+}
+
+span {
+  width: 2vw;
+  background-color: aquamarine;
+}
+
+.wrapper > * {
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper > span:nth-child(even) {
+  background-color: bisque;
+}
+
+.wrapper > span:nth-child(1) {
+  animation: fadeOut 0.8s linear;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
